@@ -34,7 +34,7 @@ const Reserve = ({setOpenModal,hotelId}) => {
   const handleClick = async ()=>{
       try {
        const allRooms =  await Promise.all(selectedRooms.map((e)=>{
-            const res = axios.put(`http://localhost:5000/api/rooms/availableRooms/${e}`,{dates:allDates}) 
+            const res = axios.put(`/api/rooms/availableRooms/${e}`,{dates:allDates}) 
             return res.data;
           }))
         if(allRooms.length===0) {
