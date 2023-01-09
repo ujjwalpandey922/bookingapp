@@ -1,0 +1,12 @@
+.list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem 0;
+    z-index: 1;
+}
+h1{
+    font-size: large
+}

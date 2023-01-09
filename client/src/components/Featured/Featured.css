@@ -1,0 +1,28 @@
+.featured{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    max-width: 1024px;
+}
+
+.featuredItem{
+    position: relative;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height:250px;
+    flex: 1;
+}
+/* fit any image in a box like this */
+.featuredImg{
+    
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.featuredTitles{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}

@@ -1,0 +1,34 @@
+.mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+   gap: .5rem;
+   padding: 30px;
+
+   background-color: rgba(169, 19, 203, 0.667);
+   color: aliceblue;
+}
+
+.mailContainer input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+}
+.mailContainer>button{
+    width: 150px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.479);
+    cursor: pointer;
+}
+.mailContainer>button:hover{
+    background-color: rgba(0, 0, 0, 0.71);
+    color: aliceblue;
+}

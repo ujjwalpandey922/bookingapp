@@ -1,0 +1,48 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   background: rgb(183, 0, 255);
+    height: 10vh;
+}
+.nav_container{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.logo{
+    font-size: larger;
+    font-weight: 600;
+    color: antiquewhite;
+}
+.logo:hover{
+    color: rgb(24, 26, 26);
+    font-size: medium;
+    font-weight: 900;
+}
+.navItems{
+   display: flex;
+   gap:2rem
+}
+.custom{
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius:10px;
+
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.776);
+}
+
+.custom:hover{
+    
+    color: rgba(255, 255, 255, 0.776);
+    background:rgb(110, 5, 145)
+}
+a{
+    text-decoration: none;
+}
