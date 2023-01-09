@@ -7,6 +7,7 @@ import hotelsroute from "./routes/hotels.js";
 import roomsroute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import path from "path";
 const app = express();
 env.config();
 //connect mongoose
@@ -57,4 +58,16 @@ app.use((err, req, res, next) => {
 //make any resq or response
 app.get("/luffy", (req, res) => {
   res.send("YoooooooooooHOHOHO");
+});
+
+//uploading code
+
+app.use(express.static(path.join(__dirname, "./client/dist")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/dist/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });

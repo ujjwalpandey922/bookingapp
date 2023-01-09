@@ -8,7 +8,7 @@ import "./reserve.css";
 
 const Reserve = ({setOpenModal,hotelId}) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
- const {data,loading,error} = useFetch(`http://localhost:5000/api/hotels/getrooms/${hotelId}`);
+ const {data,loading,error} = useFetch(`/api/hotels/getrooms/${hotelId}`);
   const {...state} = useSearchContext();
   const navTo = useNavigate();
   const handleSelect =(e)=>{

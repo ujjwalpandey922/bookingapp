@@ -25,7 +25,7 @@ const Registration = () => {
         const handleRegistration = async(e)=>{
             e.preventDefault();
             try {
-                const res =await axios.post("http://localhost:5000/api/auth/registration",credentials,{withCredentials:true});
+                const res =await axios.post("/api/auth/registration",credentials,{withCredentials:true});
                 const message = res.data;
                  navTo("/login",{state:{message}})
             } catch (err) {

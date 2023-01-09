@@ -17,7 +17,7 @@ const Hotel = () => {
   const [openModal, setOpenModal] = useState(false);
   const [imgNumber, setImgNumber] = useState(0);
   const param = useParams();
- const {data,loading,error,reFetch} = useFetch(`http://localhost:5000/api/hotels/find/${param.id}`);
+ const {data,loading,error,reFetch} = useFetch(`/api/hotels/find/${param.id}`);
  const {...state } = useSearchContext();
  const {user} = useAuthContext();
  const navTo = useNavigate();

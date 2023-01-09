@@ -18,7 +18,7 @@ const List = () => {
     const [openData, setOpenData] = useState(false)
     const [max, setMax] = useState(null);
     const [min, setMin] = useState(null);
- const {data,loading,error,reFetch} = useFetch(`http://localhost:5000/api/hotels?city=${destination}&min=${min || 0}&max=${max||10000}`);
+ const {data,loading,error,reFetch} = useFetch(`/api/hotels?city=${destination}&min=${min || 0}&max=${max||10000}`);
     const handleSearch =()=>{
       reFetch();
     }

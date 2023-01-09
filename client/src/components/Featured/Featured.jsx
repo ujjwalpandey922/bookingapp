@@ -4,7 +4,7 @@ import mumbai from "../../assets/mumbai.jpg";
 import  pune from "../../assets/pune.avif";
 import lonavala from "../../assets/lonavala.avif";
 const Featured = () => {
- const {data,loading,error} = useFetch("http://localhost:5000/api/hotels/countByCity?cities=pune,mumbai,lonavala");
+ const {data,loading,error} = useFetch("/api/hotels/countByCity?cities=pune,mumbai,lonavala");
  
   return (
     <div className="featured">
