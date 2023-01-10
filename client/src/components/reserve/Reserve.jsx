@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Navigate, useNavigate } from "react-router-dom";
+import {ToastContainer, toast } from "react-toastify";
 import useFetch from "../../hooks/useFetch";
 import useSearchContext from "../../hooks/useSearchContext";
 import "./reserve.css";
@@ -45,8 +46,11 @@ const Reserve = ({setOpenModal,hotelId}) => {
           navTo("/",{state:allRooms.length})
         }
 
-      } catch (error) {
-        //toast
+      } catch (err) {
+       toast.error(err,{
+        position:"top-right",
+        autoClose: 2000,
+       })
       }
   }
 
@@ -93,6 +97,7 @@ const Reserve = ({setOpenModal,hotelId}) => {
           Reserve Now!
         </button>
       </div>
+      <ToastContainer/>
     </div>
   )
 }
