@@ -67,3 +67,31 @@
     cursor: pointer;
     width: 100%;
 }
+
+@media (max-width:720px) {
+    .listWrapper{
+        flex-direction: column;
+    }
+    .listSearch{
+        width: 80%;
+        align-self: center;
+        margin: 1rem ;
+        position: static;
+    }
+    .distination span{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1024px) {
+    .listWrapper{
+        margin: .25rem;
+        gap: .5rem;
+    }
+    .listSearchItem{
+        font-size: 13px;
+    }
+    .listOptionItem > input{
+        width: 50px ;
+    }
+}

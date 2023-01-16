@@ -107,3 +107,38 @@
     cursor: pointer;
     border-radius: 5px;
   }
+
+  @media (max-width:720px) {
+    .searchItem{
+      width: 95%;
+      margin: 0.5rem;
+    }
+    .siImg{
+      flex: 1;
+      width: 40%;
+    }
+    .siDesc{
+      flex: 4;
+    }
+    .siDetails{
+      flex:.5 ;
+    }
+    .siFeatures{
+    display: none;  
+    }
+    .siRating{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 5px;
+    }
+    .siCheckButton{
+      font-size: 10px;
+    }
+  }
+
+   @media (max-width:1024px) {
+      .searchItem{
+        gap: .5rem;
+      }
+   }

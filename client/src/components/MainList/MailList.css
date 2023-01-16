@@ -32,3 +32,13 @@
     background-color: rgba(0, 0, 0, 0.71);
     color: aliceblue;
 }
+
+@media (max-width:1024px) {
+    .mailContainer{
+        display: grid;
+        gap: .5rem;
+        place-items: center;
+    }
+}
+
+

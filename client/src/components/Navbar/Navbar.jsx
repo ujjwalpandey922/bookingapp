@@ -29,6 +29,7 @@ const Navbar = () => {
               <button className="custom" onClick={handleLogin}>Log In</button>
             </div>}
         </div>
+        
       </div>
     </>
   )

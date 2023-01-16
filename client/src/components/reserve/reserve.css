@@ -16,7 +16,7 @@
     padding: 2rem;
     position: relative;
     height: 80vh;
-    width: 40vw;
+    min-width: 40vw;
     margin : 2rem ;  
    
 }
@@ -95,4 +95,6 @@
     display: flex;
     flex-direction: column;
   }
-  
+  @media (max-width:1024px) {
+    
+  }

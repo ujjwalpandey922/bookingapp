@@ -5,3 +5,23 @@
   padding: 0;
  
 }
+/* scrollbar */
+html {
+  --scrollbarBG: #791791fe;
+  --thumbBG: #f6f6f6;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+*::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}

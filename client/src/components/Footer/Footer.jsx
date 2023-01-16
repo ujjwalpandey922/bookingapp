@@ -45,6 +45,8 @@ const Footer = () => {
         </ul>
       </div>
       <div className="fText">Copyright © 2022 Lamabooking.</div>
+
+      
     </div>
   );
 };
