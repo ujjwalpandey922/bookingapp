@@ -1,37 +1,43 @@
 import useFetch from "../../hooks/useFetch";
-import "./FavProperty.css"
+import "./FavProperty.css";
 
 const FavProperties = () => {
- const {data,loading,error} = useFetch("/api/hotels?featured=true&limit=4");
+  const BackendAddress =
+    "https://bookingapp-l6as.onrender.com/" || "http://localhost:5000/";
+  const { data, loading, error } = useFetch(
+    `${BackendAddress}api/hotels?featured=true&limit=4`
+  );
 
   return (
     <div className="fp">
-      { loading?"LOADING":
+      {loading ? (
+        "LOADING"
+      ) : (
         <>
-        {
-          data.map((element)=>(
-
-          <div className="fpItem" key={element._id}>
-            <img
-              src={element.photos.length>0?element.photos[0]:null}
-              alt="hotel"
-              className="fpImg"
-            />
-            <span className="fpName">{element.name}</span>
-            <span className="fpCity">{element.city}</span>
-            <span className="fpPrice">Starting from {element.cheapestPrice}</span>
-            {element.rating && <div className="fpRating">
-              <button>{element.rating}</button>
-              <span>Excellent</span>
-            </div>}
-          </div>
-          ))
-        }
-          
+          {data.map((element) => (
+            <div className="fpItem" key={element._id}>
+              <img
+                src={element.photos.length > 0 ? element.photos[0] : null}
+                alt="hotel"
+                className="fpImg"
+              />
+              <span className="fpName">{element.name}</span>
+              <span className="fpCity">{element.city}</span>
+              <span className="fpPrice">
+                Starting from {element.cheapestPrice}
+              </span>
+              {element.rating && (
+                <div className="fpRating">
+                  <button>{element.rating}</button>
+                  <span>Excellent</span>
+                </div>
+              )}
+            </div>
+          ))}
         </>
-      }
-  </div>
-  )
-}
+      )}
+    </div>
+  );
+};
 
-export default FavProperties
+export default FavProperties;
